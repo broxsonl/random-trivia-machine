@@ -38,3 +38,16 @@ function generateTrivia() {
   document.getElementById("trivia-p").innerHTML = triviaArray[triviaRandom].text;
 
 }
+
+function addNewTrivia() {
+  console.log('HIT');
+  event.preventDefault();
+
+  let newTrivia = document.getElementById("new-trivia").value;
+  let newItem = document.getElementById("new-item").value;
+
+  triviaArray.push({ text: newTrivia, item: newItem});
+
+  document.getElementById("new-trivia").value = null;
+  document.getElementById("new-item").value = null;
+}
